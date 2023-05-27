@@ -1,0 +1,21 @@
+pipeline {
+    agent any 
+    stages {
+        stage("vcs") {
+           steps {
+               git url: 'https://github.com/srinuchowdary123/newspringpetclinic.git',
+                   branch: 'main'
+           }
+       }
+       stage("docker") {
+          steps {
+            sh " docker image build -t  spring:${env.BUILD_NUMBER}",
+            sh " docker tag spring:${env.BUILD_NUMBER} srinunuthi/spring:${env.BUILD_NUMBER}",
+            sh "docker push srinunuthi/spring:${env.BUILD_NUMBER} "
+            sh " docker container run -P spring:${env.BUILD_NUMBER}",
+
+        }               
+    }
+}
+
+
