@@ -12,26 +12,21 @@
   </parent>
   <name>petclinic</name>
 
-<properties>    
-   <sonar.organization>againspringtest</sonar.organization>
-   <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-</properties>
+  <properties>    
+     <sonar.organization>againspringtest</sonar.organization>
+     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+     <java.version>17</java.version>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+     <!-- Important for reproducible builds. Update using e.g. ./mvnw versions:set -DnewVersion=... -->
+     <project.build.outputTimestamp>2023-05-10T07:42:50Z</project.build.outputTimestamp>
 
-    <!-- Generic properties -->
-    <java.version>17</java.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <!-- Important for reproducible builds. Update using e.g. ./mvnw versions:set -DnewVersion=... -->
-    <project.build.outputTimestamp>2023-05-10T07:42:50Z</project.build.outputTimestamp>
-
-    <!-- Web dependencies -->
-    <webjars-bootstrap.version>5.2.3</webjars-bootstrap.version>
-    <webjars-font-awesome.version>4.7.0</webjars-font-awesome.version>
-
-    <jacoco.version>0.8.8</jacoco.version>
-    <nohttp-checkstyle.version>0.0.11</nohttp-checkstyle.version>
-    <spring-format.version>0.0.38</spring-format.version>
-
+     <!-- Web dependencies -->
+     <webjars-bootstrap.version>5.2.3</webjars-bootstrap.version>
+     <webjars-font-awesome.version>4.7.0</webjars-font-awesome.version>
+     <jacoco.version>0.8.8</jacoco.version>
+     <nohttp-checkstyle.version>0.0.11</nohttp-checkstyle.version>
+     <spring-format.version>0.0.38</spring-format.version>
   </properties>
 
   <dependencies>
@@ -117,6 +112,11 @@
       <artifactId>jakarta.xml.bind-api</artifactId>
     </dependency>
 
+    <!-- OpenJDK 17 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jdk17</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
