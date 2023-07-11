@@ -16,13 +16,10 @@
     <java.version>17</java.version>
     <sonar.organization>againspringtest</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-  </properties>
-
 
     <!-- Generic properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <!-- Important for reproducible builds. Update using e.g. ./mvnw versions:set -DnewVersion=... -->
     <project.build.outputTimestamp>2023-05-10T07:42:50Z</project.build.outputTimestamp>
 
     <!-- Web dependencies -->
@@ -36,7 +33,6 @@
     <maven-checkstyle.version>3.2.2</maven-checkstyle.version>
     <nohttp-checkstyle.version>0.0.11</nohttp-checkstyle.version>
     <spring-format.version>0.0.39</spring-format.version>
-
   </properties>
 
   <dependencies>
@@ -142,6 +138,7 @@
       <artifactId>jakarta.xml.bind-api</artifactId>
     </dependency>
 
+    <!-- Rest of the dependencies -->
   </dependencies>
 
   <dependencyManagement>
